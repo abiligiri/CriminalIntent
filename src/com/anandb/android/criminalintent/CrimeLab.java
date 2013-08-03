@@ -13,8 +13,6 @@ public class CrimeLab {
 	private CrimeLab(Context c) {
 		mContext = c;
 		mCrimes = new ArrayList<Crime>();
-		
-		populateCrimes();
 	}
 	
 	public static CrimeLab get(Context c) {
@@ -37,6 +35,10 @@ public class CrimeLab {
 		}
 		
 		return null;
+	}
+
+	public void add(Crime c) {
+		mCrimes.add(c);
 	}
 	
 	private void populateCrimes() {
